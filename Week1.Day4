@@ -1,0 +1,68 @@
+//1.FindIntersection
+package week1.day4;
+
+public class Intersection {
+	public static void main(String[] args) {
+		int a[]= {3,2,11,4,6,7};
+		int b[]= {1,2,8,4,9,7};
+		for(int i=0;i<a.length;i++) {
+			for(int j=0;j<b.length;j++) {
+			if(a[i]==b[i]) {
+				System.out.println(a[i]);
+				break;
+				}
+			    }
+		}
+}
+
+}
+//2.FindSecondLargest
+package week1.day4;
+
+import java.util.Arrays;
+
+public class SecondLargestNumber {
+	public static void main(String[] args) {
+		int[] data= {3,2,11,4,6,7};
+		Arrays.sort(data);
+		System.out.println(Arrays.toString(data));
+		System.out.println(data[data.length-2]);
+	}
+
+}
+
+//3.MissingElememt
+package week1.day4;
+
+import java.util.Arrays;
+
+public class SecondLargestNumber {
+	public static void main(String[] args) {
+		int[] data= {3,2,11,4,6,7};
+		Arrays.sort(data);
+		System.out.println(Arrays.toString(data));
+		System.out.println(data[data.length-2]);
+	}
+
+}
+
+//4.PrintDuplicates
+package week1.day4;
+
+public class PrintDuplicateNumber {
+	public static void main(String[] args) {
+		int[] arr= {14,12,13,11,15,14,18,16,17,19,18,17,20};
+		int arrlength=arr.length;
+	for(int i=0;i<arrlength-1;i++) {
+		int count=1;
+	for(int j=i+1;j<arrlength-1;j++) {
+		if(arr[i]==arr[j]) {
+			count=count+1;
+			}
+		}
+			if(count>1) {
+				System.out.println(arr[i]);
+				}
+			}
+	}
+	}
