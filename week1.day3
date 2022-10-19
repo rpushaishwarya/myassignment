@@ -1,0 +1,72 @@
+package week1.day3;
+//1.checkTheNumberIsPositiveOrNegative
+public class CheckThePositiveAndNegativeNumbers {
+	public void getNumber(int i) {
+		if(i>=0) {
+			System.out.println(i+"is positive number");
+		}
+		else {
+			System.out.println(i+"is negative number");
+		}
+	}
+public static void main(String[] args) {
+	CheckThePositiveAndNegativeNumbers number=new CheckThePositiveAndNegativeNumbers();
+	number.getNumber(-100);
+	
+	
+	
+}
+
+
+}
+
+//2.FibonacciSeries
+package week1.day3;
+
+public class FibonacciSeries {
+	public static void main(String[] args) {
+		int firstNo=0;
+		System.out.println(firstNo);
+		int secNo=1;
+		System.out.println(secNo);
+		int sum=0;
+	for (int a=1;a<=8;a++) {
+		sum=firstNo+secNo;
+		System.out.println(sum);
+		firstNo=secNo;
+		secNo=sum;
+
+		}
+			
+		
+	}
+
+}
+	
+//3.PrimeNumber
+package week1.day3;
+
+public class PrimeNumber {
+	public static void main(String[] args) {
+		int fact=12;
+		boolean flag=false;//count=0
+		for(int i=2;i<=fact/2;i++) {
+			if(fact%i==0) {
+				flag= true;
+				break;
+				
+			}
+			
+			
+		}
+		if(!flag) {//count==2
+			System.out.println(fact+"is an prime number");
+			
+		}
+		else {
+			System.out.println(fact+"is not a prime number");
+		}
+	}
+
+}
+
