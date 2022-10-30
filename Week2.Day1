@@ -1,0 +1,140 @@
+//1.ChangeOddIndexToUppercase
+package week2.day1;
+
+public class ChangeOddIndexToUpperCase {
+	public static void main(String[] args) {
+		String text="changeme";
+		char [] CharArray=text.toCharArray();
+		int length=CharArray.length;
+		for(int i=0;i<=length-1;i++) {
+		if(i%2!=0) {
+			char upperCase=Character.toUpperCase(CharArray[i]);
+			System.out.println(upperCase);
+		}
+		else {
+			System.out.println(CharArray[i]);
+		}
+				
+				
+			}
+		}
+		
+	}
+  //2.Palindrome
+  package week2.day1;
+
+public class Palindrome {
+	public static void main(String[] args) {
+		String name="madam";
+		String rev="";
+		char[] CharArray=name.toCharArray();
+		int length=CharArray.length-1;
+		for(int i=length;i>=0;i--) {
+			rev=rev+CharArray[i];
+		}
+			if(name.equals(rev)) {
+				System.out.println(name+"is an palindrome");
+				}
+			else {
+				System.out.println(name+"is not an palindrome");
+				}
+			}
+		
+				}
+
+
+//3.RemoveDuplicates
+package week2.day1;
+
+public class RemoveDuplicates {
+	public static void main(String[] args) {
+		String text="We learn java basics as part of java sessions in java week1";
+		int count=0;
+		String temp="";
+		String [] split=text.split("");
+		for(int i=0;i<=split.length-1;i++) {
+			for (int j=i+1;j<split.length-1;j++) {
+				if(split[i].equals(split[j])) {
+					temp=split[i];
+					count++;
+				}
+			}
+			
+		}
+		if(count>1) {
+			System.out.println(text.replace(temp,""));
+		}
+	}
+	
+}
+//4.ReverseEvenWords
+package week2.day1;
+
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
+public class ReverseEvenWords {
+	public static void main(String[] args) {
+		String text="I am a software tester";
+		String [] temp1=text.split("");
+		for(int i=0;i<=temp1.length-1;i++) {
+			if(i%2!=0) {
+				char [] charArray=temp1[i].toCharArray();
+				for (int j=charArray.length-1;j>0;j--) {
+					System.out.println(charArray[j]);
+				}
+				
+				
+			}
+			else {
+				System.out.println(temp1[i]);
+			}
+
+		
+	}
+		
+	}
+	
+	
+
+}
+5.Anagram
+package week2.day1;
+
+import java.util.Arrays;
+
+public class Anagram {
+	public static void main(String[] args) {
+		String text1="race";
+		String text2="care";
+		if(text1.length()==text2.length()) {
+			char [] CharArray1=text1.toCharArray();
+			char [] CharArray2=text2.toCharArray();
+			Arrays.sort(CharArray1);
+			Arrays.sort(CharArray2);
+			boolean result=Arrays.equals(CharArray1, CharArray2);
+			if(result) {
+				System.out.println(text1 + "and" + text2 + "is an Anagram");
+			}
+			else
+			{
+				System.out.println(text1 + "and" + text2 + "is not an Anagram");
+
+			}
+
+			
+		}
+		
+		
+	
+		
+		
+		
+		
+	}
+
+}
+
+
+
+
+
