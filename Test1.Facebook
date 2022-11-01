@@ -1,0 +1,49 @@
+package week3.day4;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Uibank {
+public static void main(String[] args) {
+	WebDriverManager.chromedriver().setup();
+	ChromeDriver driver=new ChromeDriver();
+	driver.manage().window().maximize();
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+	driver.get("https://uibank.uipath.com/register-account");
+	driver.findElement(By.xpath("//input[@id='firstName']")).sendKeys("Usha");
+	
+	WebElement title=driver.findElement(By.xpath("//select[@id='title']"));
+	Select d1=new Select(title);
+	d1.selectByVisibleText("Ms");
+	
+	driver.findElement(By.xpath("//input[@id='middleName']")).sendKeys("Ishwarya");
+	driver.findElement(By.xpath("//input[@id='lastName']")).sendKeys("Rp");
+	
+	WebElement sex=driver.findElement(By.xpath("//select[@id='sex']"));
+	Select d2=new Select(sex);
+	d2.selectByIndex(1);
+	
+	WebElement emp=driver.findElement(By.xpath("//select[@id='employmentStatus']"));
+	Select d3=new Select(emp);
+	d3.selectByIndex(2);
+	
+	driver.findElement(By.xpath("//input[@id='age']")).sendKeys("20,19/3/2002");
+	WebElement ms=driver.findElement(By.xpath("//select[@id='maritalStatus']"));
+	Select d4=new Select(ms);
+	d4.selectByIndex(0);
+	
+	driver.findElement(By.xpath("//input[@id='numberOfDependents']")).click();
+	
+	driver.findElement(By.xpath("//input[@id='username']")).sendKeys("UshaIshwaryarp");
+	driver.findElement(By.xpath("//input[@id='email']")).sendKeys("rpushaishwarya@gmail.com");
+	driver.findElement(By.xpath("//input[@id='password']")).sendKeys("*******");
+	
+
+}
+}
