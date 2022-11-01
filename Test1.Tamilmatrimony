@@ -1,0 +1,73 @@
+package week3.day4;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Tamilmatrimony {
+	public static void main(String[] args) {
+		WebDriverManager.chromedriver().setup();
+		ChromeDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.get("https://WWW.tamilmatrimony.in/");
+		WebElement reg=driver.findElement(By.xpath("//select[@id='REGISTERED_BY']"));
+		Select dd1=new Select(reg);
+		dd1.selectByIndex(7);
+		driver.findElement(By.xpath("//input[@id='NAME']")).sendKeys("Jacksparrow");
+		driver.findElement(By.xpath("//input[@name='GENDER']/parent::label[1]")).click();
+		WebElement birth=driver.findElement(By.xpath("//select[@id='DOBDAY']"));
+		Select d1=new Select(birth);
+		d1.selectByIndex(5);
+		
+		WebElement month=driver.findElement(By.xpath("//select[@id='DOBMONTH']"));
+		Select d2=new Select(month);
+		d2.selectByIndex(6);
+		
+		WebElement year=driver.findElement(By.xpath("//select[@id='DOBYEAR']"));
+		Select d3=new Select(year);
+		d3.selectByIndex(2);
+		
+		WebElement rel=driver.findElement(By.xpath("//select[@id='RELIGION']"));
+		Select d4=new Select(rel);
+		d4.selectByIndex(3);
+		
+		WebElement lang=driver.findElement(By.xpath("//select[@id='MOTHERTONGUE']"));
+		Select d5=new Select(lang);
+		d5.selectByIndex(1);
+		
+		WebElement cas=driver.findElement(By.xpath("//select[@id='CASTE_NORMAL']"));
+		Select d6=new Select(cas);
+		d6.selectByIndex(2);
+		
+		WebElement coun=driver.findElement(By.xpath("//select[@id='COUNTRY']"));
+		Select d7=new Select(coun);
+		d7.selectByIndex(3);
+		
+		WebElement mr=driver.findElement(By.xpath("//select[@id='M_COUNTRYCODE']"));
+		Select d8=new Select(mr);
+		d8.selectByIndex(9);
+		
+		
+		driver.findElement(By.id("MOBILENO")).sendKeys("0987654321");
+		driver.findElement(By.xpath("//input[@id='EMAIL']")).sendKeys("jacksparrow@gmail.com");
+		driver.findElement(By.xpath("//input[@name='PASSWD1']")).sendKeys("1234");
+		
+
+
+
+
+
+
+		
+		
+
+
+	}
+
+}
