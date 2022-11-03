@@ -1,0 +1,28 @@
+package system;
+
+public class Computer {
+	public void computerModel(String model) {
+		System.out.println(model);
+	}
+
+
+}
+
+
+package system;
+
+
+public class Desktop extends Computer{
+	public void deskTopSize(double d) {
+		System.out.println(d);
+		
+	}
+	public static void main(String[] args) {
+		Desktop dp=new Desktop();
+		dp.deskTopSize(0.4);
+		dp.computerModel("Hp 15s-du3xxx");
+}
+		
+}
+
+
