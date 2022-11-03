@@ -1,0 +1,56 @@
+package college;
+
+public class College {
+		public void  collegeName(String name) {
+			System.out.println(name);
+		}
+		public void  collegeCode(int code) {
+			System.out.println(code);
+			
+		}
+		public void  collegeRank(int rank) {
+			System.out.println(rank);
+		}
+
+}
+
+
+package Department;
+
+import college.College;
+
+public class Departmen extends College {
+	public void departName(String depname) {
+		System.out.println(depname);
+	}
+	
+
+}
+
+
+package Student;
+
+import Department.Departmen;
+
+public class Student extends Departmen{
+	public void studentName(String name) {
+		System.out.println(name);
+	}
+	public void studentDept(String dep) {
+		System.out.println(dep);
+	}
+	public void studentId(String id) {
+		System.out.println(id);
+	}
+	public static void main(String[] args) {
+		Student std=new Student();
+		std.collegeName("MMES Womens Arts and Science College");
+		std.collegeRank(13);
+		std.collegeCode(346);
+		std.departName("BSC ComputerScience");
+		std.studentName("usha");
+		std.studentId("M19691");
+		std.studentDept("BSC ComputerScience");
+	}
+
+}
